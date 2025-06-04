@@ -1,0 +1,671 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="icon" type="image/png" href="img/Favicons/icons8-portfolio-ios-16-32.png">
+    <link rel="icon" type="image/png" href="img/Favicons/icons8-portfolio-ios-16-16.png">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.0/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css" integrity="sha512-ZpcaZ031fgI0ryEPFCdjUms80bt0oV453+GxoI0+Xa4rYj7FQRXy1Lsi7BSkvlpiJcq3iYdxZX5/oDHhj/uomw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Jorik Goris | Portfolio</title>
+    <style>
+        .internship__text p {
+            margin-bottom: 1.5rem;
+        }
+        .internship__text p:last-child {
+            margin-bottom: 0;
+        }
+        .home__info .button {
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+        .home__info .button:last-of-type {
+            background-color: #ffffff;
+            color: #0066cc;
+            border: 2px solid #0066cc;
+            transition: all 0.3s ease;
+        }
+        .home__info .button:last-of-type:hover {
+            background-color: #0066cc;
+            color: #ffffff;
+        }
+        .home__info .button i {
+            margin-right: 0.5rem;
+        }
+        .images__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .image__item {
+            text-align: center;
+        }
+        .image__item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .image__caption {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .project__text p {
+            margin-bottom: 1.5rem;
+        }
+        .applied-skills {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .applied-skills h4 {
+            margin-bottom: 1rem;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        .applied-skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        .applied-skills li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .applied-skills li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0066cc;
+        }
+        .project__image {
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .project__image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        @media screen and (max-width: 768px) {
+            .home {
+                min-height: auto;
+                padding: 6rem 1rem 2rem;
+            }
+            .home__info {
+                flex: 1;
+                padding-right: 0;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            .home__img {
+                flex: 1;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+            .home__img img {
+                width: 100%;
+                height: auto;
+                position: static;
+            }
+            .about__container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about__img {
+                margin-bottom: 2rem;
+            }
+            .about__img img {
+                width: 200px;
+                margin: 0 auto;
+            }
+            .about__text {
+                width: 100%;
+                margin-left: 0;
+                padding: 0 1rem;
+            }
+            .images__grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .home {
+                padding: 5rem 1rem 2rem;
+            }
+            .home__info h1 {
+                font-size: 2rem;
+            }
+            .home__info p {
+                font-size: 1.2rem;
+            }
+            .home__img {
+                max-width: 250px;
+            }
+            .about__img img {
+                width: 180px;
+            }
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4WY72X63NJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-4WY72X63NJ');
+    </script></head>
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+<header class="l-header">
+    <nav class="nav">
+        <a href="" class="nav__logo">Jorik Goris</a>
+        <div class="nav__menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="#home" class="nav__item__link">
+                        <i class="bx bx-home nav__item__icon"></i>
+                        Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__item__link">
+                        <i class="bx bx-user nav__item__icon"></i>
+                        Over mij</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#qualification" class="nav__item__link">
+                        <i class="bx bx-briefcase nav__item__icon"></i>
+                        Ervaringen</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#internship" class="nav__item__link">
+                        <i class="bx bx-award nav__item__icon "></i>
+                        Stage</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#project" class="nav__item__link">
+                        <i class="bx bx-task nav__item__icon"></i>
+                        Realisaties</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-btn">
+            <span class="menu-btn__burger"></span>
+        </div>
+    </nav>
+</header>
+<main>
+
+    <div>
+        <section class="home content" id="home">
+            <div class="home__info">
+                <h1>Jorik Goris</h1>
+                <p>Student Cloud & Cybersecurity</p>
+                <a href="#about" data-aos="fade-down" data-aos-delay="600" class="button aos-init aos-animate">Over mij</a>
+                <a href="documents/CV_JorikGoris.pdf" data-aos="fade-down" data-aos-delay="800" class="button aos-init" download>
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+            <div class="home__img">
+                <img src="img/Jorik.png" data-aos="fade-down" data-aos-delay="300" alt="figma" class="aos-init aos-animate" onContextMenu="return false">
+            </div>
+        </section>
+    </div>
+    <section class="about section" id="about">
+        <h2 class="section__title">Over mij</h2>
+        <div class="about__container content">
+            <div class="about__img">
+                <img src="img/foto_jorik.jpg" data-aos="fade-down" data-aos-delay="300" alt="jorik" class="aos-init" onContextMenu="return false">
+            </div>
+            <div class="about__text aos-init" data-aos="fade-down" data-aos-delay="800">
+                <h2 class="about__subtitle">Jorik Goris</h2>
+                <p data-aos="fade-down" data-aos-delay="600" class="aos-init">
+                    Ik ben Jorik, student in de bachelor Cloud- en Cybersecurity, nadat ik eerder het graduaat Systeem- en Netwerkbeheer heb afgerond. Tijdens die eerste opleiding merkte ik al snel dat vooral de vakken rond cloud en cybersecurity me het meest aanspraken. Daarom koos ik ervoor om me hierin verder te verdiepen via de professionele bachelor Cloud- en Cybersecurity. </br></br>
+                    In de huidige IT-wereld vind ik het belangrijk om niet alleen systemen op te zetten, maar ook te begrijpen hoe je ze veilig en betrouwbaar maakt. Die kennis heb ik verder ontwikkeld tijdens deze opleiding. Projecten zoals de opbouw van ons educatief datacenter, waar ik veel praktijkervaring opdeed, hebben daar zeker toe bijgedragen. </br></br>
+                    Wat mij vooral aanspreekt, is de combinatie van theorie en praktijk. Labs en projecten maken de leerstof tastbaar, en ik haal veel voldoening uit het effectief toepassen van concepten in realistische scenario's.
+                    Ik heb een brede basis in netwerken en systeembeheer (zoals Windows Server en Active Directory), en een specifieke interesse in moderne cloudoplossingen en cybersecurity. Binnen security gaat mijn voorkeur uit naar de defensieve kant, zoals SOC-analyses en incident response. Tegelijk heb ik ook geleerd hoe aanvallers te werk gaan, een inzicht dat cruciaal is om sterke verdedigingen uit te bouwen. </br></br>
+                    Momenteel ben ik op zoek naar een eerste uitdagende juniorfunctie waarin ik kan blijven groeien en ontdekken welke IT-domeinen het best bij mij passen. Bekijk hieronder mijn skills.   </p>
+            </div>
+
+        </div>
+    </section>
+    <section class="skills section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <div class="skills__container content">
+            <div class="skills__left">
+                <h2>Professional Skills</h2>
+                <p>Hieronder vindt u mijn sterkste professionele vaardigheden
+                </p>
+                <br/>
+                <div class="skills__data aos-init" data-aos="fade-down" data-aos-delay="300">
+                    <div class="skills__names">
+                        <i class="fas fa-server skills__icon "></i> 
+                        <span class="skills__name">Infrastructuur & Datacenter technology</span>
+                    </div>
+                    <div class="skills__bar">
+                        <span class="skills__progress" data-progress="80" style="opacity: 0; width: 0px;"></span>
+                    </div>
+                    <div>
+                        <span class="skills__percentage">80%</span>
+                    </div>
+                </div>
+
+                <div class="skills__data aos-init" data-aos="fade-down" data-aos-delay="400">
+                    <div class="skills__names">
+                        <i class="fas fa-infinity skills__icon"></i>
+                        <span class="skills__name">Cloud platforms & Devops tools</span>
+                    </div>
+                    <div class="skills__bar">
+                        <span class="skills__progress" data-progress="80" style="opacity: 0; width: 0px;"></span>
+                    </div>
+                    <div>
+                        <span class="skills__percentage">80%</span>
+                    </div>
+                </div>
+
+                <div class="skills__data aos-init" data-aos="fade-down" data-aos-delay="500">
+                    <div class="skills__names">
+                        <i class="fa-solid fa-shield skills__icon"></i>
+                        <span class="skills__names">Cybersecurity</span>
+                    </div>
+                    <div class="skills__bar">
+                        <span class="skills__progress" data-progress="75" style="opacity: 0; width: 0px;"></span>
+                    </div>
+                    <div>
+                        <span class="skills__percentage">75%</span>
+                    </div>
+                </div>
+
+                <div class="skills__data aos-init" data-aos="fade-down" data-aos-delay="600">
+                    <div class="skills__names">
+                        <i class="fas fa-users skills__icon"></i>
+                        <span class="skills__name">Gebruikersbeheer (AD)</span>
+                    </div>
+                    <div class="skills__bar">
+                        <span class="skills__progress" data-progress="75" style="opacity: 0; width: 0px;"></span>
+                    </div>
+                    <div>
+                        <span class="skills__percentage">75%</span>
+                    </div>
+                </div>
+
+                <div class="skills__data aos-init" data-aos="fade-down" data-aos-delay="700">
+                    <div class="skills__names">
+                        <i class="fas fa-network-wired skills__icon"></i>
+                        <span class="skills__name">Netwerkbeheer</span>
+                    </div>
+                    <div class="skills__bar">
+                        <span class="skills__progress" data-progress="70" style="opacity: 0; width: 0px;"></span>
+                    </div>
+                    <div>
+                        <span class="skills__percentage">70%</span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="skills__right">
+                <img src="img/work3.jpg" class="skills__img aos-init" alt="" data-aos="fade-down" data-aos-delay="200">
+            </div>
+        </div>
+    </section>
+
+    <section class="qualification section" id="qualification">
+        <h2 class="section__title">Ervaringen </h2>
+        <div class="qualification__options">
+            <a class="option education-btn active">
+                <i class="bx bxs-graduation"></i>
+                Opleiding
+            </a>
+            <a class="option work-btn">
+                <i class="bx bx-briefcase-alt-2"></i>
+                Werkervaring
+            </a>
+        </div>
+        <div class="qualification__container content">
+            <div class="education">
+                <div class="qualification__item left aos-init" data-aos="fade-down" data-aos-delay="200">
+                    <div class="qualification__img">
+                        <img src="img/thomas-more-logo.png" alt="thomas-more-logo" data-aos="fade-down" data-aos-delay="400" class="aos-init">
+                    </div>
+                    <div class="qualification__content aos-init" data-aos="fade-down" data-aos-delay="600">
+                        <span class="qualification__date">2021 - 2023</span>
+                        <h2>Thomas More <small>| Graduaat Systeem- en netwerkbeheer</small></h2>
+                        <p>Tijdens mijn opleiding bij Thomas More als systeem- en netwerkbeheerder heb ik mij verder verdiept in het netwerkbeheer via CCNA 1, 2 en 3.</br></br>
+                            Belangrijke onderwerpen die aan bod kwamen:</br>
+                            • Windows Server en Active Directory</br>
+                            • Scripting in Python en PowerShell</br>
+                            • Windows deployment met MSCCM en Intune</br>
+                            • DevOps technologieën (AWS, Terraform, Ansible)</br>
+                            • Monitoring tools (Prometheus, Grafana)</br>
+                            • Versiebeheer met Git</br></br>
+                            Daarnaast heb ik hier kennis kunnen maken met cybersecurity, wat mogelijks een volgende stap in mijn carrière kan zijn.</p>
+                    </div>
+                </div>
+                <div class="qualification__position aos-init" data-aos="fade-down" data-aos-delay="200">
+                    <div class="qualification__item right">
+                        <div class="qualification__img">
+                            <img src="img/thomas-more-logo.png" alt="thomas-more-logo" data-aos="fade-down" data-aos-delay="400" class="aos-init">
+                        </div>
+                        <div class="qualification__content aos-init" data-aos="fade-down" data-aos-delay="600">
+                            <span class="qualification__date">2023 - 2025</span>
+                            <h2>Thomas More <small>| Bachelor Cloud- en Cybersecurity</small></h2>
+                            <p>Na mijn graduaat Systeem- en Netwerkbeheer koos ik ervoor om verder te studeren in de bachelor Cloud- en Cybersecurity.</br></br>
+                            Tijdens deze opleiding lag de focus op:</br>
+                            • Cloudplatformen (AWS en Azure)</br>
+                            • Cloud engineering</br>
+                            • Datacentertechnologie</br>
+                            • Cybersecurity</br>
+                            • Virtualisatie en automatisatie</br>
+                            • DevOps practices</br></br>
+                            De theorie werd steeds gekoppeld aan praktijk via labs, projecten en de opbouw van een educatief datacenter, waar ik mijn technische kennis echt in de vingers kreeg. Daarnaast heb ik de kans gekregen enkele projecten uit te voeren waar ik kennis uit verschillende domeinen kon toepassen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="work hidden">
+                <div class="qualification__item left aos-init" data-aos="fade-down" data-aos-delay="200">
+                    <div class="qualification__img">
+                        <img src="img/DriezenIT.png" alt="logoDriezenIT" data-aos="fade-down" data-aos-delay="400" class="aos-init">
+                    </div>
+                    <div class="qualification__content aos-init" data-aos="fade-down" data-aos-delay="600">
+                        <span class="qualification__date">2020 - 2022</span>
+                        <h2>DriezenIT <small>| Vakantiewerk bekabeling & wifiinstallaties</small></h2>
+                        <p>Bij DriezenIT heb ik samen met de senior networkengineer in scholen door heel vlaanderen bekabelingswerken en wifiinstallaties uitgevoerd gebruik makend van de producten van Cisco Meraki. Hier heb ik erg veel hands-on ervaring opgedaan.</br></br>
+                        Belangrijkste taken:</br>
+                        • Uitvoeren van bekabelingswerken</br>
+                        • Installatie en configuratie van Cisco Meraki wifi-apparatuur</br>
+                        • Implementatie van beveiligingscamera's</br></br>
+                        Een hoogtepunt was mijn betrokkenheid bij het voorzien van een complete Cisco beveiligingscamera installatie bij Sempre Life BV, één van de grotere volledige Cisco Meraki installaties in de Benelux.</p>
+                    </div>
+                </div>
+                <div class="qualification__position right aos-init" data-aos="fade-down" data-aos-delay="200">
+                    <div class="qualification__item right aos-init">
+                        <div class="qualification__img">
+                            <img src="img/logoBMI.png" alt="logoBMI" data-aos="fade-down" data-aos-delay="400" class="aos-init">
+                        </div>
+                        <div class="qualification__content aos-init" data-aos="fade-down" data-aos-delay="600">
+                            <span class="qualification__date">feb. 2023 - juni 2023</span>
+                            <h2>B&MI Leisure <small>| Stage graduaat</small></h2>
+                            <p>Om mijn opleiding systeem- en netwerkbeheer bij Thomas More af te sluiten heb ik een 14 week lange periode werkplekleren uitgevoerd bij BMI Leisure.</br></br>
+                            BMI is een SAAS Scale-UP in de FEC sector. Als systeembeheerder en DevOps engineer waren mijn hoofdtaken:</br>
+                            • Onderhoud en vernieuwing van infrastructuur</br>
+                            • Beheer van Azure AD en Intune</br>
+                            • GSuite administratie</br>
+                            • Monitoring met Grafana en Prometheus</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="qualification__position left aos-init" data-aos="fade-down" data-aos-delay="200">
+                    <div class="qualification__item aos-init">
+                        <div class="qualification__img">
+                            <img src="img/Coolblue_Logo.svg.png" alt="logoCoolblue" data-aos="fade-down" data-aos-delay="400" class="aos-init">
+                        </div>
+                        <div class="qualification__content aos-init" data-aos="fade-down" data-aos-delay="600">
+                            <span class="qualification__date">dec. 2023 - heden</span>
+                            <h2>Coolblue <small>| Sales advisor</small></h2>
+                            <p>Eind 2023 ben ik gestart als verkoopadviseur bij de nieuwe Coolblue-winkel in Olen.</br></br>
+                            Wat begon als een kans om mijn softskills te versterken, groeide uit tot een job waarin ik écht plezier vind. In een enthousiast en jong team help ik klanten met advies over allerlei producten, van de nieuwste iPhones tot wasmachines, steeds met de Coolblue-visie in het achterhoofd: klanten zo goed mogelijk helpen, en alles doen voor een glimlach.</br></br>
+                            Deze studentenjob heeft mijn communicatieve vaardigheden enorm versterkt en me inzichten gegeven die ook in een IT-context van pas komen.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="qualification__position right aos-init" data-aos="fade-down" data-aos-delay="200">
+                    <div class="qualification__item right aos-init">
+                        <div class="qualification__img">
+                            <img src="img/logo_AZTurnhout.jpg" alt="logoAZTurnhout" data-aos="fade-down" data-aos-delay="400" class="aos-init">
+                        </div>
+                        <div class="qualification__content aos-init" data-aos="fade-down" data-aos-delay="600">
+                            <span class="qualification__date">feb. 2025 - mei 2025</span>
+                            <h2>AZ Turnhout <small>| Stage bachelor</small></h2>
+                            <p>Voor het afronden van mijn opleiding heb ik stage gelopen bij AZ Turnhout, een complexe IT-omgeving binnen de zorgsector.</br></br>
+                            Belangrijkste projecten en taken:</br>
+                            • Implementatie van interne vulnerability scanning voor NIS2-compliance</br>
+                            • Migratie van legacy SFTP-server</br>
+                            • Beheer van Microsoft Defender-incidenten</br>
+                            • Gebruikersondersteuning</br></br>
+                            Een technisch uitdagende maar erg leerrijke ervaring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="internship section" id="internship">
+        <h2 class="section__title">Stage</h2>
+        <div class="internship__container content">
+            <div class="internship__text aos-init" data-aos="fade-down" data-aos-delay="300">
+                <p>In de periode van februari tot en met mei 2025 liep ik stage bij AZ Turnhout, ter afronding van mijn bacheloropleiding Cloud- & Cybersecurity aan Thomas More. AZ Turnhout is een groot regionaal ziekenhuis met een complexe IT-omgeving waarin zorg, medische apparatuur, ICT en cybersecurity hand in hand moeten gaan.</p>
+
+                <p>Mijn hoofdopdracht bestond uit het uitwerken van een oplossing voor interne vulnerability scanning in het kader van NIS2-compliance, specifiek de controle op asset-kwetsbaarheden (ID.RA-1). Hiervoor zette ik een fysieke Kali Linux-server op, uitgerust met zowel Nessus als openVAS, en integreerde ik deze in het netwerk via Network Access Control met behulp van MAC-spoofing. Zo konden ook toestellen die niet opgenomen zijn in Microsoft Defender, zoals medische apparatuur en IoT, actief gescand worden op kwetsbaarheden.</p>
+
+                <p>Naast deze hoofdtaak werkte ik ook aan de migratie van een verouderde Docker-host die als schakelstuk dient tussen het Rode Kruis en het labo, waarbij ik de bestaande setup analyseerde en herbouwde met Docker Compose en Portainer, om het beheer eenvoudiger en veiliger te maken. Verder was ik betrokken bij de opvolging van incidenten in het Microsoft Defender-portaal, waar ik phishingpogingen en kwetsbaarheden opvolgde en analyseerde via Advanced Hunting.</p>
+
+                <p>Tijdens deze stage leerde ik hoe theorie uit de opleiding zich vertaalt naar een productieomgeving waar je afhankelijk bent van bestaande systemen en strikte beveiligingsregels. Het werken in een ziekenhuisomgeving was technisch uitdagend, maar vooral ook erg leerrijk. Een extra voordeel was dat mijn stagementor, Hans Verboven, zelf ook enkele jaren geleden dezelfde opleiding heeft gevolgd. Hierdoor begreep hij goed waar ik vandaan kwam en kon hij me nuttige inzichten bieden, zowel inhoudelijk als over de verwachtingen binnen de stage.</p>
+
+                <p>Ik kijk tevreden terug op deze periode waarin ik zelfstandig een werkende oplossing kon afleveren, ervaring opdeed in echte infrastructuur, en de kans kreeg om mijn kennis in de praktijk te brengen. Bekijk hieronder de documenten die ik heb gemaakt tijdens deze stage.</p>
+            </div>
+
+            <div class="internship__images aos-init" data-aos="fade-up" data-aos-delay="300">
+                <div class="images__grid">
+                    <div class="image__item">
+                        <img src="img/campus_se.jpg" alt="Campus Sint-Elisabeth" onContextMenu="return false">
+                        <p class="image__caption">Campus Sint-Elisabeth AZ Turnhout</p>
+                    </div>
+                    <div class="image__item">
+                        <img src="img/server.jpg" alt="Server Infrastructure" onContextMenu="return false">
+                        <p class="image__caption">Server Infrastructure</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="internship__downloads aos-init" data-aos="fade-up" data-aos-delay="300">
+                <h3>Stage Documenten</h3>
+                <div class="downloads__grid">
+                    <a href="documents/placeholder_pva.txt" class="download__item">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Plan van Aanpak</span>
+                    </a>
+                    <a href="documents/placeholder_realisatie.txt" class="download__item">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Realisatiedocument</span>
+                    </a>
+                    <a href="documents/placeholder_reflectie.txt" class="download__item">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Reflectie</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project section" id="project">
+        <h2 class="section__title">Realisaties</h2>
+        <div class="project__container content">
+            <div class="project__text aos-init" data-aos="fade-down" data-aos-delay="300">
+                <p>Gedurende mijn opleiding heb ik verschillende projecten uitgevoerd waar ik erg trots op ben. Hieronder vindt u een overzicht van deze projecten.</p>
+            </div>
+
+            <div class="project__text aos-init" data-aos="fade-down" data-aos-delay="300">
+                <h3>Datacenter Technology</h3>
+                <p>Als afsluiter van het vak Datacenter Technology kregen we de opdracht om een eigen datacenter op te zetten. Na een reeks theoretische lessen over VMware en virtualisatie, gingen we in groep aan de slag om een eigen VMware-cluster te bouwen. Deze bestond uit ESXi-servers, een zelf opgezet netwerk en storage-integratie, firewalling en VPN. We kregen de vrijheid om onze infrastructuur naar eigen inzicht te ontwerpen en implementeren.</p>
+
+                <p>Hoewel het beschikbare materiaal wat verouderd was en af en toe mankementen vertoonde, zijn we erin geslaagd om met wat creativiteit en doorzettingsvermogen een stabiele en goed functionerende virtualisatieomgeving op te zetten. Ik ben trots op het eindresultaat én op het mooie eindcijfer dat we behaalden.</p>
+
+                <p>Binnen het team nam ik de verantwoordelijkheid op voor het serverbeheer, netwerk en bekabeling. Mijn teamgenoot Anthony focuste zich op het storagegedeelte, firewalling en VPN. Persoonlijk vond ik dit project het leukste, en ook meest leerzame project.</p>
+
+                <div class="applied-skills aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Toegepaste skills</h4>
+                    <ul>
+                        <li>HP switching</li>
+                        <li>VMware ESXi, vSphere, vCenter & features</li>
+                        <li>Server- en storagehardware</li>
+                        <li>Opzetten van een SAN (Storage Area Network) & fiberswitch</li>
+                    </ul>
+                </div>
+
+                <div class="project__image aos-init" data-aos="fade-up" data-aos-delay="300">
+                    <img src="img/datacenter.jpg" alt="Datacenter Project" onContextMenu="return false">
+                    <p class="image__caption">Ons opgezet datacenter tijdens het project</p>
+                </div>
+            </div>
+
+            <div class="project__text aos-init" data-aos="fade-down" data-aos-delay="300">
+                <h3>Network & OS Security: Build a Security Operations Center</h3>
+                <p>Het opzetten van een Security Operations Center (SOC) is geen eenvoudige opdracht. Toch kregen we deze uitdaging als eindproject voor het vak Cybersecurity & Security Operations Center. Tijdens de lessen leerden we de verschillende componenten van een SOC kennen, van detectie tot respons en kregen we inzicht in hoe deze met elkaar samenwerken.</p>
+
+                <p>De opdracht bestond uit het opzetten van een productiesysteem, zoals een webserver, waarop we vervolgens data verzamelden. Deze data werd verwerkt in een dashboard en gekoppeld aan een SIEM (Security Information and Event Management) om alerts te genereren. Op basis van deze alerts werd via een SOAR (Security Orchestration, Automation and Response) automatisch gereageerd op incidenten.</p>
+
+                <p>Tijdens het examen demonstreerden we een aanval op het productiesysteem, waarna we lieten zien hoe het volledige SOC daarop inspeelde, van detectie tot geautomatiseerde response. Gezien we toegang hadden tot onze eigen virtualisatiecluster, heb ik ervoor gekozen het SOC te deployen binnen de vSphere-omgeving. Daarbij heb ik gebruikgemaakt van virtuele switches om verschillende netwerken op te zetten, waaronder een WAN, LAN en DMZ.</p>
+
+                <div class="applied-skills aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Toegepaste skills</h4>
+                    <ul>
+                        <li>Linux serverbeheer</li>
+                        <li>ELK Stack (Elasticsearch, Logstash, Kibana)</li>
+                        <li>Cybersecurity monitoring & incident response</li>
+                        <li>Netwerken in vSphere (virtuele netwerken, VLAN-structuur)</li>
+                        <li>Alerting via Slack</li>
+                    </ul>
+                </div>
+
+                <div class="project__image aos-init" data-aos="fade-up" data-aos-delay="300">
+                    <img src="img/soc.png" alt="Security Operations Center Project" onContextMenu="return false">
+                    <p class="image__caption">Overzicht van het Security Operations Center</p>
+                </div>
+            </div>
+
+            <div class="project__text aos-init" data-aos="fade-down" data-aos-delay="300">
+                <h3>Project Hosting</h3>
+                <p>Voor dit project kregen we in groep de opdracht om een eigen hostingplatform op te zetten. Het was een brede en uitdagende opdracht, waarbij we in de eerste weken vooral gefocust hebben op research en het verkennen van mogelijke technologieën. Het project sloot aan bij het eerdere Datacenter Technology-project: we gebruikten namelijk onze zelfgebouwde virtualisatieclusters als basis voor dit nieuwe platform.</p>
+
+                <p>Hoewel het geen eenvoudige opdracht was, leverde het veel nieuwe inzichten op. Mijn persoonlijke verantwoordelijkheden lagen bij het opzetten van de infrastructuur voor het beheer van managementtools, én het ontwikkelen van een CI/CD-pipeline met Jenkins.</p>
+
+                <p>Tijdens dit project heb ik me verdiept in Talos Linux, een minimalistisch besturingssysteem geoptimaliseerd voor het draaien van Kubernetes-clusters. Talos heeft geen traditionele gebruikersinterface of shell en wordt volledig beheerd via een API. Configuratie gebeurt via talosctl, waarna je de Kubernetes-omgeving kunt beheren. Vooral op het vlak van Kubernetes en Talos Linux heb ik veel bijgeleerd. Daarnaast kreeg ik de kans om te experimenteren met Jenkins voor het automatiseren van de deployment pipeline, die de code ging ombouwen naar een Docker container.</p>
+
+                <div class="applied-skills aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Toegepaste skills</h4>
+                    <ul>
+                        <li>Linux serverbeheer</li>
+                        <li>Kubernetes</li>
+                        <li>Docker</li>
+                        <li>Talos Linux</li>
+                        <li>Jenkins (CI/CD)</li>
+                    </ul>
+                </div>
+
+                <div class="project__image aos-init" data-aos="fade-up" data-aos-delay="300">
+                    <img src="img/talos.png" alt="Talos Linux Project" onContextMenu="return false">
+                    <p class="image__caption">Talos Linux Kubernetes Cluster</p>
+                </div>
+            </div>
+
+            <div class="project__text aos-init" data-aos="fade-down" data-aos-delay="300">
+                <h3>Business Essentials</h3>
+                <p>Om te slagen voor het vak Business Essentials moesten we punten verzamelen door verschillende bedrijfsbezoeken uit te voeren. Hoewel dit project minder technisch van aard is dan de andere projecten in deze portfolio, vind ik het belangrijk om het te vermelden. Het bood namelijk waardevolle inzichten in de werking van bedrijven én bracht me op plekken die je als student niet snel bezoekt.</p>
+
+                <p>Dankzij deze opdracht kreeg ik de kans om onder andere een bezoek te brengen aan Nike en Oracle. Bij Nike in Laakdal kregen we een uitgebreide rondleiding door het logistieke centrum. Daarnaast was er een presentatie en een interactieve vragenronde met enkele ICT-verantwoordelijken. Deze combinatie van logistiek en technologie maakte het bezoek erg boeiend. Persoonlijk lijkt het mij interessant later zelf in zo'n sector aan de slag te gaan.</p>
+
+                <p>Het bezoek aan Oracle in Vilvoorde had een meer technisch karakter. We kregen eerst een presentatie over hoe Oracle wereldwijd een rol speelt in topsport, zoals Formule 1 en zeilwedstrijden. Aansluitend volgde een interessante workshop rond ARM-based Kubernetes-clusters. Dit project vereiste de nodige buitenschoolse inzet, maar leverde unieke en leerrijke ervaringen op die me zijn bijgebleven.</p>
+
+                <div class="applied-skills aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Toegepaste skills</h4>
+                    <ul>
+                        <li>Communicatie (bedrijfsbezoeken plannen)</li>
+                        <li>Inzicht in bedrijfsvoering</li>
+                        <li>Technisch inzicht bij presentaties en workshops</li>
+                    </ul>
+                </div>
+
+                <div class="project__image aos-init" data-aos="fade-up" data-aos-delay="300">
+                    <img src="img/oracle.jpg" alt="Oracle Bedrijfsbezoek" onContextMenu="return false">
+                    <p class="image__caption">Bedrijfsbezoek bij Oracle Vilvoorde</p>
+                </div>
+            </div>
+
+            <div class="project__text aos-init" data-aos="fade-down" data-aos-delay="300">
+                <h3>Project 4.0</h3>
+                <p>Op de stage en bachelorproef na was Project 4.0 het laatste grote groepsproject van mijn opleiding. Het unieke aan dit project is dat studenten uit verschillende afstudeerrichtingen worden samengebracht in één team. Denk hierbij aan studenten uit Application Development, Cloud & Cybersecurity, Artificial Intelligence, en normaal gezien ook IoT. Het is een integratieproject waarin we samenwerken aan een opdracht voor een echte klant of organisatie.</p>
+
+                <p>Wat dit project zo boeiend maakt, is de verscheidenheid aan thema's en technische uitdagingen. Ons project stak er, naar mijn mening, met kop en schouders bovenuit qua originaliteit. We kregen de opdracht om een systeem te ontwikkelen voor imkervereniging 't Geels Bieke, met als doel om nesten van Aziatische hoornaars op te sporen en bijenkasten te beschermen. Uiteindelijk kozen we ervoor om met behulp van AI en beeldherkenning een elektrische harp automatisch te activeren, en via triangulatie de locatie van een hoornaarsnest te bepalen.</p>
+
+                <p>Hoewel dit als proof of concept (POC) een interessant en vernieuwend idee was, bleek het in de praktijk erg complex en moeilijk realiseerbaar op een efficiënte manier. Toch was het een leerzame uitdaging. Mijn specifieke verantwoordelijkheid binnen het project was het opzetten van een CI/CD-pipeline met GitLab. Deze pipeline bouwde de code van de ontwikkelaars automatisch in Docker-containers, zodat alles vlot en efficiënt kon worden uitgerold op een Orange Pi-device, met geïntegreerde security scanning. Dit project heeft me veel bijgebracht op het vlak van CI/CD met GitLab, het gebruik van Docker, en vooral het samenwerken met teamleden uit totaal verschillende technische disciplines.</p>
+
+                <div class="applied-skills aos-init" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Toegepaste skills</h4>
+                    <ul>
+                        <li>Teamwork</li>
+                        <li>Communicatie</li>
+                        <li>Documentatie</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <div class="contact__container content">
+            <form action="mailto:jorikgoris@gmail.com" method="POST" enctype="text/plain" class="contact__form">
+                <div class="wrap__input aos-init" data-aos="fade-down" data-aos-delay="300">
+                    <label class="wrap__input__label" for="name">
+                        <i class="bx bx-user"></i>
+                    </label>
+                    <div style="position: relative">
+                        <input class="wrap__input__field" type="text" id="name" name="name" placeholder="Full name" required="">
+                        <span class="wrap__input__focus"></span>
+                    </div>
+                    <small class="alert">You cannot leave this field empty.</small>
+                </div>
+                <div class="wrap__input aos-init" data-aos="fade-down" data-aos-delay="400">
+                    <label class="wrap__input__label" for="email">
+                        <i class="bx bx-envelope"></i>
+                    </label>
+                    <div style="position: relative">
+                        <input class="wrap__input__field" type="email" id="email" name="email" placeholder="Eg. example@email.com" required="">
+                        <span class="wrap__input__focus"></span>
+                    </div>
+                    <small class="alert">You cannot leave this field empty.</small>
+                </div>
+                <div class="wrap__input aos-init" data-aos="fade-down" data-aos-delay="500">
+                    <label class="wrap__input__label" for="message">
+                        <i class="bx bx-message-rounded"></i>
+                    </label>
+                    <div style="position: relative">
+                        <textarea class="wrap__input__field" maxlength="480px" id="message" name="message" placeholder="Your message" required=""></textarea>
+                        <span class="wrap__input__focus"></span>
+                    </div>
+                    <small class="alert">Please write a message.</small>
+                </div>
+                <div class="wrap__submit">
+                    <input type="submit" class="wrap__submit__btn" value="Send">
+                </div>
+            </form>
+        </div>
+    </section>
+    <div class="modal">
+        <span class="close">×</span>
+        <img src="" class="modal__img" alt="modal">
+    </div>
+</main>
+<footer class="footer">
+    <p class="footer__title">Jorik Goris</p>
+    <div class="footer__social">
+        <a href="https://www.linkedin.com/in/jorik-goris-452979214/"><i class="bx bxl-linkedin-square"></i></a>
+        <a href="mailto:jorikgoris@gmail.com"><i class="bx bx-at"></i></a>
+    </div>
+    <p>
+        Copyright &copy; <script>document.write(new Date().getFullYear())</script> Jorik Goris All Rights Reserved
+    </p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js" integrity="sha512-BABFxitBmYt44N6n1NIJkGOsNaVaCs/GpaJwDktrfkWIBFnMD6p5l9m+Kc/4SLJSJ4mYf+cstX98NYrsG/M9ag==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
+</body></html>
