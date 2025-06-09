@@ -615,41 +615,24 @@
     <section class="contact section" id="contact">
         <h2 class="section__title">Contact</h2>
         <div class="contact__container content">
-            <form action="mailto:jorikgoris@gmail.com" method="POST" enctype="text/plain" class="contact__form">
-                <div class="wrap__input aos-init" data-aos="fade-down" data-aos-delay="300">
-                    <label class="wrap__input__label" for="name">
-                        <i class="bx bx-user"></i>
-                    </label>
-                    <div style="position: relative">
-                        <input class="wrap__input__field" type="text" id="name" name="name" placeholder="Full name" required="">
-                        <span class="wrap__input__focus"></span>
-                    </div>
-                    <small class="alert">You cannot leave this field empty.</small>
-                </div>
-                <div class="wrap__input aos-init" data-aos="fade-down" data-aos-delay="400">
-                    <label class="wrap__input__label" for="email">
-                        <i class="bx bx-envelope"></i>
-                    </label>
-                    <div style="position: relative">
-                        <input class="wrap__input__field" type="email" id="email" name="email" placeholder="Eg. example@email.com" required="">
-                        <span class="wrap__input__focus"></span>
-                    </div>
-                    <small class="alert">You cannot leave this field empty.</small>
-                </div>
-                <div class="wrap__input aos-init" data-aos="fade-down" data-aos-delay="500">
-                    <label class="wrap__input__label" for="message">
-                        <i class="bx bx-message-rounded"></i>
-                    </label>
-                    <div style="position: relative">
-                        <textarea class="wrap__input__field" maxlength="480px" id="message" name="message" placeholder="Your message" required=""></textarea>
-                        <span class="wrap__input__focus"></span>
-                    </div>
-                    <small class="alert">Please write a message.</small>
-                </div>
-                <div class="wrap__submit">
-                    <input type="submit" class="wrap__submit__btn" value="Send">
-                </div>
-            </form>
+            <div class="contact__info aos-init" data-aos="fade-down" data-aos-delay="300" style="text-align: center;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    Voor vragen of inlichtingen, stuur een e-mail naar:
+                </p>
+                <p style="font-size: 1.5rem; margin-bottom: 2rem;">
+                    <a href="mailto:jorikgoris@gmail.com" style="color: #0066cc; text-decoration: none;">
+                        <i class="bx bx-envelope"></i> jorikgoris@gmail.com
+                    </a>
+                </p>
+                <p style="font-size: 1.2rem;">
+                    Je kan me ook vinden op LinkedIn:
+                </p>
+                <p style="font-size: 1.5rem; margin-top: 1rem;">
+                    <a href="https://www.linkedin.com/in/jorik-goris-452979214/" style="color: #0066cc; text-decoration: none;" target="_blank">
+                        <i class="bx bxl-linkedin-square"></i> LinkedIn Profile
+                    </a>
+                </p>
+            </div>
         </div>
     </section>
     <div class="modal">
